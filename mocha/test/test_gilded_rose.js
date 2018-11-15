@@ -32,7 +32,7 @@ function createItems () {
     expect(items[3].sellIn).to.equal(sellIn - 1);
   });
 
-  it("decreases the quality twice as fast after the due date is passed", function() {
+  it("decreases the quality of Soy Milk twice as fast after the due date is passed", function() {
     const gildedRose = new Shop(createItems());
     var soyMilk = gildedRose.items[3]
     soyMilk.sellIn = 0;
@@ -42,7 +42,7 @@ function createItems () {
   });
 
 
-  it("never decreases an item's quality to a negative", function() {
+  it("does not increase Soy Milk's quality to a negative", function() {
     const gildedRose = new Shop(createItems());
     var soyMilk = gildedRose.items[3]
     soyMilk.quality = 0
@@ -58,7 +58,7 @@ function createItems () {
     expect(items[0].quality).to.equal(quality + 1);
   });
 
-  it("never increases the item's value above 50", function() {
+  it("does not increase Brie's value above 50", function() {
     const gildedRose = new Shop(createItems());
     var brie = gildedRose.items[0]
     brie.sellIn = -10
@@ -68,7 +68,7 @@ function createItems () {
   });
 
 
-  it("never decreases in quality when the item is sulfuras", function() {
+  it("does not decrease in quality when the item is sulfuras", function() {
     const gildedRose = new Shop(createItems());
     var sulfuras = gildedRose.items[2]
     quality = sulfuras.quality;
