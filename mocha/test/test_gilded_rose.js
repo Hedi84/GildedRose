@@ -125,6 +125,8 @@ describe("Gilded Rose outcomes", function() {
     things.push(conjured_milk);
     fairy_potion = new Item("Fairy Potion: you murdered a fairy for this, but it was worth it", 5, 50);
     things.push(fairy_potion);
+    expired_milk = new Item("Milk - conjured and very expired", -0, 4);
+    things.push(expired_milk);
     return things;
   }
 
